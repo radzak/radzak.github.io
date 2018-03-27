@@ -19,3 +19,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# I only use Yarn as my official Node package manager,
+# and so I will only commit yarn.lock files, and ignore
+# package-lock.json files.
+package-lock.json
+
+.idea
