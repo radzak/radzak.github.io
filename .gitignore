@@ -10,6 +10,7 @@
 /build
 
 # misc
+.idea
 .DS_Store
 .env.local
 .env.development.local
@@ -25,4 +26,5 @@ yarn-error.log*
 # package-lock.json files.
 package-lock.json
 
-.idea
+# CSS
+*.css
