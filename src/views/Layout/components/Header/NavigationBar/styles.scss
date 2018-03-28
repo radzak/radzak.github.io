@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+}
+
+.nav-header,
+.nav-items,
+.nav-social {
+  flex: 1;
+  align-items: center;
+  display: flex;
+}
+
+.nav-header {
+  justify-content: flex-start;
+}
+
+.nav-items {
+  justify-content: center;
+}
+
+.nav-social {
+  justify-content: flex-end;
+}
