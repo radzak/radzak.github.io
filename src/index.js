@@ -2,8 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import './styles/defaults.css';
+import './styles/constants.css';
+import './styles/classes.css';
+import './styles/colors.css';
+
 import App from './App';
-import './styles/index.css';
 
 ReactDOM.render(
   <Router>
