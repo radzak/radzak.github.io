@@ -1,7 +1,10 @@
+@import 'styles/placeholders.scss';
+
 .footer {
-  width: 100%;
   padding: var(--padding-medium);
+  @extend %flexSpaced;
 
   background-color: var(--primary-color);
   color: var(--primary-text-color);
+  font-size: var(--font-size-small);
 }

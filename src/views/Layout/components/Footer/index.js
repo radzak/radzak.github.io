@@ -5,6 +5,8 @@ import styles from './styles.css';
 
 const cx = classNames.bind(styles);
 
-const Footer = props => <footer className={cx('footer')}>Footer</footer>;
+const Footer = props => (
+  <footer className={cx('footer')}>Made by radzak © {new Date().getFullYear()}</footer>
+);
 
 export default Footer;

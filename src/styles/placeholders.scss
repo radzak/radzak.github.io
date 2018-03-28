@@ -1,6 +1,12 @@
-%flexboxSpaced {
+%flexSpaced {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+%flexCentered {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
