@@ -1,7 +1,10 @@
 .social-link {
-  padding: var(--padding-medium-2);
-  color: inherit;
+  display: block;
+  padding: var(--padding-medium-2) 0;
+  text-align: center;
+
   font-size: 1.5em;
+  color: inherit;
 
   &:hover {
     color: var(--primary-text-color-hover);

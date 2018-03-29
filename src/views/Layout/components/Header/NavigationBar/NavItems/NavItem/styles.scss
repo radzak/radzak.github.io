@@ -1,6 +1,7 @@
 .navLink {
-  padding: var(--padding-medium-2);
-  display: inline-block;
+  display: block;
+  text-align: center;
+  padding: var(--padding-medium-2) 0;
 
   font-size: 1.2em;
   color: var(--primary-text-color);

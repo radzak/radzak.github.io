@@ -7,10 +7,10 @@
 .nav-header,
 .nav-items,
 .nav-social {
-  flex: 1;
-  align-items: center;
   display: flex;
   flex-direction: column;
+
+  flex: 1;
 }
 
 .nav-header {

@@ -7,7 +7,7 @@ import styles from './styles.css';
 const cx = classNames.bind(styles);
 
 const Header = props => (
-  <header className={cx('header')}>
+  <header className={`${cx('header')} animated fadeInLeft`}>
     <NavigationBar />
     {/* <Toolbar onDrawerClick={this.sideDrawerToggleHandler} /> */}
     {/* SideDrawer -> TO BE ADDED */}

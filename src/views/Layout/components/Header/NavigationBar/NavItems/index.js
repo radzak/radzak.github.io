@@ -9,6 +9,7 @@ const cx = classNames.bind(styles);
 
 const NavItems = () => (
   <nav className={cx('nav-items')}>
+    {/* <NavItem cssClass="animated fadeInLeft" exact to="/" text="Home" icon="fas fa-home" /> */}
     <NavItem exact to="/" text="Home" icon="fas fa-home" />
     <NavItem exact to="/about" text="About" icon="fas fa-user-circle" />
     <NavItem exact to="/cv" text="CV" icon="fas fa-address-card" />

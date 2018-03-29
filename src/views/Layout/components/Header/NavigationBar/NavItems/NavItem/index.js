@@ -7,9 +7,15 @@ import styles from './styles.css';
 
 const cx = classNames.bind(styles);
 
-const NavItem = ({ text, icon, ...rest }) => (
+const NavItem = ({
+  cssClass, text, icon, ...rest
+}) => (
   <li>
-    <NavLink {...rest} className={cx('navLink')} activeClassName={cx('navLink--active')}>
+    <NavLink
+      {...rest}
+      className={`${cx('navLink')} ${cssClass}`}
+      activeClassName={cx('navLink--active')}
+    >
       <i className={icon} />
       {/* {text} */}
     </NavLink>
@@ -17,8 +23,13 @@ const NavItem = ({ text, icon, ...rest }) => (
 );
 
 NavItem.propTypes = {
+  cssClass: PropTypes.string,
   text: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired
+};
+
+NavItem.defaultProps = {
+  cssClass: ''
 };
 
 export default NavItem;
