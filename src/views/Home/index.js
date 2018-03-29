@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 const Home = props => (
   <div className={cx('home-banner')}>
-    <div className="animated zoomIn">
+    <div className="animated slideInRight">
       <p style={{ textAlign: 'center' }}>
         Lorizzle ipsizzle dolor sit amizzle, fizzle adipiscing pizzle. Nullizzle ma nizzle velit,
         aliquet volutpizzle, gangsta boofron, gravida pot, go to hizzle. Go to hizzle ass tortizzle.

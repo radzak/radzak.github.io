@@ -1,5 +1,7 @@
 .navbar {
   display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .nav-header,
@@ -8,6 +10,7 @@
   flex: 1;
   align-items: center;
   display: flex;
+  flex-direction: column;
 }
 
 .nav-header {

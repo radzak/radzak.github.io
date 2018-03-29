@@ -4,7 +4,6 @@ import classNames from 'classnames/bind';
 
 import Particles from './components/Particles';
 import Header from './components/Header';
-import Footer from './components/Footer';
 import styles from './styles.css';
 
 const cx = classNames.bind(styles);
@@ -18,9 +17,6 @@ const Layout = props => (
       <Header />
     </div>
     <main className={cx('main')}>{props.children}</main>
-    <div className={cx('footer')}>
-      <Footer />
-    </div>
   </div>
 );
 

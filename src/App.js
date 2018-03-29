@@ -9,12 +9,12 @@ import About from '@/views/About';
 class App extends Component {
   render() {
     return (
-      <Switch>
-        <Layout>
+      <Layout>
+        <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
-        </Layout>
-      </Switch>
+        </Switch>
+      </Layout>
     );
   }
 }

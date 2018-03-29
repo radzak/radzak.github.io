@@ -1,12 +1,13 @@
 .navLink {
+  padding: var(--padding-medium-2);
+  display: inline-block;
+
+  font-size: 1.2em;
   color: var(--primary-text-color);
-  padding: var(--padding-large);
 
   &:hover {
     color: var(--primary-text-color-hover);
   }
-
-  font-size: 1.2em;
 }
 
 .navLink--active {

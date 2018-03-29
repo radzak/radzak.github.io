@@ -11,7 +11,7 @@ const NavItem = ({ text, icon, ...rest }) => (
   <li>
     <NavLink {...rest} className={cx('navLink')} activeClassName={cx('navLink--active')}>
       <i className={icon} />
-      {text}
+      {/* {text} */}
     </NavLink>
   </li>
 );
