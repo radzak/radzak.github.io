@@ -28,3 +28,4 @@ package-lock.json
 
 # CSS
 *.css
+!/public/*.css
