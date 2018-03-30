@@ -1,6 +1,12 @@
+@import 'styles/breakpoints.scss';
+
 .nav-items {
   display: flex;
   flex-direction: column;
+
+  @include for-desktop-up {
+    flex-direction: row;
+  }
 
   list-style: none;
   font-size: 1.5em;

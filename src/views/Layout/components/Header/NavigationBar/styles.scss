@@ -1,7 +1,13 @@
+@import 'styles/breakpoints.scss';
+
 .navbar {
   display: flex;
   flex-direction: column;
   height: 100%;
+
+  @include for-desktop-up {
+    flex-direction: row;
+  }
 }
 
 .nav-header,
@@ -9,8 +15,11 @@
 .nav-social {
   display: flex;
   flex-direction: column;
-
   flex: 1;
+
+  @include for-desktop-up {
+    flex-direction: row;
+  }
 }
 
 .nav-header {

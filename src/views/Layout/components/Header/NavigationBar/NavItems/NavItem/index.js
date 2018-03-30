@@ -26,8 +26,8 @@ class NavItem extends Component {
       >
         <NavLink
           {...rest}
-          className={`${cx('navLink')} ${cssClass}`}
-          activeClassName={cx('navLink--active')}
+          className={`${cx('nav-link')} ${cssClass}`}
+          activeClassName={cx('nav-link--active')}
         >
           <i className={icon} />
         </NavLink>

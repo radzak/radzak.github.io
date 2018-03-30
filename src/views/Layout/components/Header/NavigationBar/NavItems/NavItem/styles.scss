@@ -1,16 +1,27 @@
-.navLink {
+@import 'styles/breakpoints.scss';
+
+.nav-link {
   display: block;
+  height: 100%;
   text-align: center;
   padding: var(--padding-medium) 0;
 
   font-size: 1.2em;
   color: var(--primary-text-color);
 
+  @include for-desktop-up {
+    padding: 0 var(--padding-medium);
+  }
+
   &:hover {
     color: var(--primary-text-color-hover);
   }
 }
 
-.navLink--active {
+.nav-link--active {
   color: var(--primary-text-color-active);
+}
+
+.nav-link svg {
+  height: 100%;
 }

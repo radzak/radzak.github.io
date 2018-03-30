@@ -1,4 +1,10 @@
+@import 'styles/breakpoints.scss';
+
 .social-media {
   display: flex;
   flex-direction: column;
+
+  @include for-desktop-up {
+    flex-direction: row;
+  }
 }

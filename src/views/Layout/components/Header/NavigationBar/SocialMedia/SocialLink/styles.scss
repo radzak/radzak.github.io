@@ -1,12 +1,24 @@
+@import 'styles/breakpoints.scss';
+
 .social-link {
   display: block;
-  padding: var(--padding-medium-2) 0;
+  height: 100%;
+
+  padding: var(--padding-medium) 0;
   text-align: center;
 
-  font-size: 1.5em;
+  @include for-desktop-up {
+    padding: 0 var(--padding-medium);
+  }
+
+  font-size: 1.2em;
   color: inherit;
 
   &:hover {
     color: var(--primary-text-color-hover);
   }
+}
+
+.social-link svg {
+  height: 100%;
 }

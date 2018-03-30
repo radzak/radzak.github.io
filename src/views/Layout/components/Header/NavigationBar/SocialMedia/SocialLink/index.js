@@ -7,9 +7,11 @@ import styles from './styles.css';
 const cx = classNames.bind(styles);
 
 const SocialLink = ({ icon, link, cssClass }) => (
-  <a className={`${cx('social-link')} ${cssClass}`} href={link} target="_blank">
-    <i className={icon} />
-  </a>
+  <li className={cssClass} style={{ listStyleType: 'none' }}>
+    <a className={cx('social-link')} href={link} target="_blank">
+      <i className={icon} />
+    </a>
+  </li>
 );
 
 SocialLink.propTypes = {
