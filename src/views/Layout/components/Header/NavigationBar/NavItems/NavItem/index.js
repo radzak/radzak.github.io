@@ -21,7 +21,6 @@ class NavItem extends Component {
       <li
         style={{ position: 'relative' }}
         onMouseEnter={() => this.setState({ showCaption: true })}
-        onClick={() => this.setState({ showCaption: false })}
         onMouseLeave={() => this.setState({ showCaption: false })}
       >
         <NavLink
@@ -29,7 +28,7 @@ class NavItem extends Component {
           className={`${cx('nav-link')} ${cssClass}`}
           activeClassName={cx('nav-link--active')}
         >
-          <i className={icon} />
+          <i className={`${icon} hvr-icon`} />
         </NavLink>
         {text &&
           this.state.showCaption && (

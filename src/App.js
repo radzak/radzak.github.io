@@ -5,7 +5,6 @@ import Layout from '@/views/Layout';
 import Home from '@/views/Home';
 import About from '@/views/About';
 
-// eslint-disable-next-line react/prefer-stateless-function
 class App extends Component {
   state = {
     loading: true

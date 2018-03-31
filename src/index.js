@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './styles/defaults.css';
 import './styles/constants.css';
 import './styles/classes.css';
+import './styles/effects.css';
 import './styles/colors.css';
 
 import App from './App';

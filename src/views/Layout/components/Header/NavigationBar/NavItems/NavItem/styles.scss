@@ -25,3 +25,16 @@
 .nav-link svg {
   height: 100%;
 }
+
+:global(.hvr-icon-push) {
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+:global(.hvr-icon-push) :global(.hvr-icon) {
+  transform: translateZ(0);
+  transition: transform 0.3s ease-out;
+}
+:global(.hvr-icon-push):hover :global(.hvr-icon),
+:global(.hvr-icon-push).nav-link--active :global(.hvr-icon) {
+  transform: scale(0.8);
+}
