@@ -30,7 +30,7 @@
   font-variant: small-caps;
   font-size: 0.7em;
   display: none;
-  margin-top: -1px;
+  margin-top: var(--padding-small);
 
   @include for-tablet-landscape-up {
     display: inline;

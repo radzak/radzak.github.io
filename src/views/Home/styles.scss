@@ -6,6 +6,38 @@
   user-select: none;
 }
 
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
 .home-banner h1 {
   font-family: 'Montserrat', sans-serif;
   color: #cacaca;
@@ -22,30 +54,29 @@
 }
 
 .home-banner h2 {
-  color: #8d8d8d;
+  // color: #8d8d8d;
   margin-top: 9px;
   font-size: 1.4em;
   font-family: 'PT Sans Narrow', sans-serif;
   letter-spacing: 3px;
   display: inline-block;
 
-  &:hover {
-    mask-image: linear-gradient(
-      -75deg,
-      rgba(0, 0, 0, 0.6) 30%,
-      #000 50%,
-      rgba(0, 0, 0, 0.6) 70%
-    );
-    mask-size: 200%;
-    animation: shine 2s infinite;
-  }
+  mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0.6) 30%,
+    #000 50%,
+    rgba(0, 0, 0, 0.6) 70%
+  );
+  mask-size: 200%;
+  animation: shine 4s infinite;
 }
 
 @keyframes shine {
-  from {
+  0%,
+  50% {
     mask-position: 150%;
   }
-  to {
+  100% {
     mask-position: -50%;
   }
 }

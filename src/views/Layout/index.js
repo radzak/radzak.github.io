@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
-import Particles from './components/Particles';
+// import Particles from './components/Particles';
 import Header from './components/Header';
 import styles from './styles.css';
 

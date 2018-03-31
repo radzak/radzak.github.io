@@ -9,7 +9,7 @@
 
   @include for-tablet-landscape-up {
     grid-template-columns: 1fr;
-    grid-template-rows: 3.125em 1fr;
+    grid-template-rows: 3.825em 1fr;
     grid-template-areas:
       'header'
       'main';
