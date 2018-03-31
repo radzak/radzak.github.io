@@ -12,26 +12,24 @@ class App extends Component {
   };
 
   componentDidMount() {
-    // setTimeout(() => this.setState({ loading: false }), 1000);
-
     // TODO: don't use fixed timeout, instead check if the #root is not empty
-    const ele = document.getElementById('ipl-progress-indicator');
-    if (ele) {
-      setTimeout(() => {
-        ele.classList.add('available');
-        this.setState({ loading: false });
-        setTimeout(() => {
-          ele.outerHTML = '';
-        }, 2000);
-      }, 600);
-    }
+    // const ele = document.getElementById('loader');
+    // if (ele) {
+    //   setTimeout(() => {
+    //     ele.classList.add('available');
+    //     this.setState({ loading: false });
+    //     setTimeout(() => {
+    //       ele.outerHTML = '';
+    //     }, 2000);
+    //   }, 2000);
+    // }
   }
 
   render() {
     const { loading } = this.state;
 
     if (loading) {
-      return null; // render null when app is not ready
+      return null;
     }
 
     return (
