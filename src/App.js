@@ -13,16 +13,17 @@ class App extends Component {
 
   componentDidMount() {
     // TODO: don't use fixed timeout, instead check if the #root is not empty
-    // const ele = document.getElementById('loader');
-    // if (ele) {
-    //   setTimeout(() => {
-    //     ele.classList.add('available');
-    //     this.setState({ loading: false });
-    //     setTimeout(() => {
-    //       ele.outerHTML = '';
-    //     }, 2000);
-    //   }, 2000);
-    // }
+    const ele = document.getElementById('loader');
+    if (ele) {
+      setTimeout(() => {
+        ele.classList.add('available');
+
+        setTimeout(() => {
+          this.setState({ loading: false });
+          ele.outerHTML = '';
+        }, 436); // fadeOut animation duration
+      }, 1000);
+    }
   }
 
   render() {

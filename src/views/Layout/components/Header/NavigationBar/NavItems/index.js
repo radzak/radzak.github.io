@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 
 const NavItems = () => (
   <nav className={cx('nav-items')}>
-    <NavItem exact to="/about" text="About" icon="fas fa-user-circle" />
+    <NavItem exact to="/about" text="About" icon="fas fa-user" />
     <NavItem exact to="/cv" text="CV" icon="fas fa-address-card" />
   </nav>
 );
