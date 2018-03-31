@@ -7,11 +7,11 @@
   padding: var(--padding-medium) 0;
   text-align: center;
 
-  @include for-desktop-up {
+  @include for-tablet-landscape-up {
     padding: 0 var(--padding-medium);
   }
 
-  font-size: 1.2em;
+  font-size: 0.9em;
   color: inherit;
 
   &:hover {

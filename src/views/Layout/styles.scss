@@ -7,7 +7,7 @@
   grid-template-columns: 3.125em 1fr;
   grid-template-areas: 'header main';
 
-  @include for-desktop-up {
+  @include for-tablet-landscape-up {
     grid-template-columns: 1fr;
     grid-template-rows: 3.125em 1fr;
     grid-template-areas:
@@ -21,7 +21,7 @@
   grid-column-end: main;
   grid-row: 1;
 
-  @include for-desktop-up {
+  @include for-tablet-landscape-up {
     grid-row-start: header;
     grid-row-end: main;
     grid-column: 1;

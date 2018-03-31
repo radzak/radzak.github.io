@@ -5,26 +5,20 @@ import styles from './styles.css';
 
 const cx = classNames.bind(styles);
 
+const spanLetters = text =>
+  // eslint-disable-next-line react/no-array-index-key
+  text.split('').map((letter, index) => <span key={`${letter}@${index}`}>{letter}</span>);
+
 const Home = props => (
+  // TODO: fix pointer events
+  // TODO: scale/breakpoint font-size
   <div className={cx('home-banner')}>
     <div className="animated fadeIn" style={{ animationDuration: '3s' }}>
-      <h1
-        style={{
-          display: 'block',
-          fontSize: '7.7vw',
-          lineHeight: '7.9vw',
-          textAlign: 'center',
-          verticalAlign: 'baseline'
-        }}
-      >
-        <span>Not</span> <span>Your</span>
-        <br />
-        <span>Average</span>
-        <br />
-        <span>Full Stack</span>
-        <br />
-        <span>Developer</span>
-      </h1>
+      <h1 className={cx('bouncy-text')}>{spanLetters('Hi!')}</h1>
+      <br />
+      <h1>My name is Radek</h1>
+      <br />
+      <h2>and I&apos;m a Full Stack Developer</h2>
     </div>
   </div>
 );

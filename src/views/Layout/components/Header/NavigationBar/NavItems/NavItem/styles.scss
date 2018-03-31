@@ -1,15 +1,18 @@
 @import 'styles/breakpoints.scss';
 
 .nav-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   height: 100%;
-  text-align: center;
   padding: var(--padding-medium) 0;
 
-  font-size: 1.2em;
+  font-family: 'PT Sans Narrow', sans-serif;
   color: var(--primary-text-color);
 
-  @include for-desktop-up {
+  @include for-tablet-landscape-up {
     padding: 0 var(--padding-medium);
   }
 
@@ -22,8 +25,16 @@
   color: var(--primary-text-color-active);
 }
 
-.nav-link svg {
-  height: 100%;
+.nav-link-caption {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  font-size: 0.7em;
+  display: none;
+  margin-top: -1px;
+
+  @include for-tablet-landscape-up {
+    display: inline;
+  }
 }
 
 :global(.hvr-icon-push) {

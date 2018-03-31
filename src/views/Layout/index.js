@@ -10,9 +10,9 @@ const cx = classNames.bind(styles);
 
 const Layout = props => (
   <div className={cx('container')}>
-    <div className={cx('overlay')}>
+    {/* <div className={cx('overlay')}>
       <Particles />
-    </div>
+    </div> */}
     <div className={cx('header')}>
       <Header />
     </div>

@@ -21,7 +21,7 @@ class App extends Component {
           this.setState({ loading: false });
           ele.outerHTML = '';
         }, 436); // fadeOut animation duration
-      }, 1000);
+      }, 500);
     }
   }
 

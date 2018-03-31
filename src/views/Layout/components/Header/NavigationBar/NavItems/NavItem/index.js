@@ -7,38 +7,23 @@ import styles from './styles.css';
 
 const cx = classNames.bind(styles);
 
+// eslint-disable-next-line react/prefer-stateless-function
 class NavItem extends Component {
-  state = {
-    showCaption: false
-  };
-
   render() {
     const {
       cssClass, text, icon, ...rest
     } = this.props;
 
     return (
-      <li
-        style={{ position: 'relative' }}
-        onMouseEnter={() => this.setState({ showCaption: true })}
-        onMouseLeave={() => this.setState({ showCaption: false })}
-      >
+      <li>
         <NavLink
           {...rest}
           className={`${cx('nav-link')} ${cssClass}`}
           activeClassName={cx('nav-link--active')}
         >
           <i className={`${icon} hvr-icon`} />
+          <span className={cx('nav-link-caption')}>{text}</span>
         </NavLink>
-        {text &&
-          this.state.showCaption && (
-            <div
-              className="animated fadeIn"
-              style={{ position: 'absolute', left: '80px', bottom: '15px' }}
-            >
-              {text}
-            </div>
-          )}
       </li>
     );
   }
@@ -46,13 +31,12 @@ class NavItem extends Component {
 
 NavItem.propTypes = {
   cssClass: PropTypes.string,
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired
 };
 
 NavItem.defaultProps = {
-  cssClass: '',
-  text: ''
+  cssClass: ''
 };
 
 export default NavItem;
