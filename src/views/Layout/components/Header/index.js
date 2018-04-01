@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 
 const Header = props => (
   // TODO: fade from the right direction
-  <header className={`${cx('header')} animated fadeInDown`}>
+  <header className={cx('header', 'animated', 'fadeInDown')}>
     <NavigationBar />
   </header>
 );

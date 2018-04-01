@@ -18,10 +18,10 @@ class NavItem extends Component {
       <li>
         <NavLink
           {...rest}
-          className={`${cx('nav-link')} ${cssClass}`}
+          className={cx('nav-link', cssClass)}
           activeClassName={cx('nav-link--active')}
         >
-          <i className={`${icon} hvr-icon`} />
+          <i className={classNames(icon, 'hvr-icon')} />
           <span className={cx('nav-link-caption')}>{text}</span>
         </NavLink>
       </li>

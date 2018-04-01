@@ -6,38 +6,6 @@
   user-select: none;
 }
 
-.typewriter h1 {
-  color: #fff;
-  font-family: monospace;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.15em; /* Adjust as needed */
-  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
-}
-
 .home-banner h1 {
   font-family: 'Montserrat', sans-serif;
   color: #cacaca;
@@ -47,10 +15,6 @@
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
   white-space: nowrap;
   display: inline-block;
-
-  span:hover {
-    color: #616161;
-  }
 }
 
 .home-banner h2 {
@@ -79,98 +43,4 @@
   100% {
     mask-position: -50%;
   }
-}
-
-.bouncy-text span {
-  display: inline-block;
-  animation: float 0.3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: none;
-  }
-  33% {
-    transform: translateY(-1px) rotate(-2deg);
-  }
-  66% {
-    transform: translateY(1px) rotate(2deg);
-  }
-}
-.bouncy-text:hover span {
-  animation: bounce 0.6s;
-}
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translate(0);
-  }
-  25% {
-    transform: rotateX(20deg) translateY(2px) rotate(-3deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(3deg) scale(1.1);
-  }
-}
-
-// .bouncy-text span:nth-child(4n) {
-//   color: hsl(50, 75%, 55%);
-//   text-shadow: 1px 1px hsl(50, 75%, 45%), 2px 2px hsl(50, 45%, 45%),
-//     3px 3px hsl(50, 45%, 45%), 4px 4px hsl(50, 75%, 45%);
-// }
-// .bouncy-text span:nth-child(4n-1) {
-//   color: hsl(135, 35%, 55%);
-//   text-shadow: 1px 1px hsl(135, 35%, 45%), 2px 2px hsl(135, 35%, 45%),
-//     3px 3px hsl(135, 35%, 45%), 4px 4px hsl(135, 35%, 45%);
-// }
-// .bouncy-text span:nth-child(4n-2) {
-//   color: hsl(155, 35%, 60%);
-//   text-shadow: 1px 1px hsl(155, 25%, 50%), 2px 2px hsl(155, 25%, 50%),
-//     3px 3px hsl(155, 25%, 50%), 4px 4px hsl(140, 25%, 50%);
-// }
-// .bouncy-text span:nth-child(4n-3) {
-//   color: hsl(30, 65%, 60%);
-//   text-shadow: 1px 1px hsl(30, 45%, 50%), 2px 2px hsl(30, 45%, 50%),
-//     3px 3px hsl(30, 45%, 50%), 4px 4px hsl(30, 45%, 50%);
-// }
-
-.bouncy-text span:nth-child(2) {
-  animation-delay: 0.05s;
-}
-.bouncy-text span:nth-child(3) {
-  animation-delay: 0.1s;
-}
-.bouncy-text span:nth-child(4) {
-  animation-delay: 0.15s;
-}
-.bouncy-text span:nth-child(5) {
-  animation-delay: 0.2s;
-}
-.bouncy-text span:nth-child(6) {
-  animation-delay: 0.25s;
-}
-.bouncy-text span:nth-child(7) {
-  animation-delay: 0.3s;
-}
-.bouncy-text span:nth-child(8) {
-  animation-delay: 0.35s;
-}
-.bouncy-text span:nth-child(9) {
-  animation-delay: 0.4s;
-}
-.bouncy-text span:nth-child(10) {
-  animation-delay: 0.45s;
-}
-.bouncy-text span:nth-child(11) {
-  animation-delay: 0.5s;
-}
-.bouncy-text span:nth-child(12) {
-  animation-delay: 0.55s;
-}
-.bouncy-text span:nth-child(13) {
-  animation-delay: 0.6s;
-}
-.bouncy-text span:nth-child(14) {
-  animation-delay: 0.65s;
 }

@@ -28,7 +28,7 @@
 .nav-link-caption {
   text-transform: lowercase;
   font-variant: small-caps;
-  font-size: 0.7em;
+  font-size: 0.8em;
   display: none;
   margin-top: var(--padding-small);
 
@@ -36,6 +36,8 @@
     display: inline;
   }
 }
+
+// move this to effects somehow
 
 :global(.hvr-icon-push) {
   transform: perspective(1px) translateZ(0);

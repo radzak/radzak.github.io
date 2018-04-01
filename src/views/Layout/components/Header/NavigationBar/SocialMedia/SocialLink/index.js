@@ -21,7 +21,7 @@ SocialLink.propTypes = {
 };
 
 SocialLink.defaultProps = {
-  cssClass: ''
+  cssClass: undefined
 };
 
 export default SocialLink;
