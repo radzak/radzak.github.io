@@ -1,5 +1,7 @@
 @import 'styles/placeholders.scss';
 
-:global(.spacedRow) {
-  @extend %flexSpaced;
+:global {
+  .spacedRow {
+    @extend %flexSpaced;
+  }
 }

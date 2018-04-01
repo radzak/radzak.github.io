@@ -1,0 +1,13 @@
+:global {
+  .hvr-icon-push {
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .hvr-icon-push .hvr-icon {
+    transform: translateZ(0);
+    transition: transform 0.3s ease-out;
+  }
+  .hvr-icon-push:hover .hvr-icon {
+    transform: scale(0.8);
+  }
+}
