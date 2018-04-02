@@ -1,0 +1,15 @@
+.contact-row {
+  display: flex;
+  height: 100%;
+  pointer-events: all;
+  margin-top: var(--padding-large);
+
+  .info {
+    flex: 1;
+  }
+
+  .map {
+    flex: 1;
+    position: relative;
+  }
+}

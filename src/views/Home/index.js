@@ -53,13 +53,3 @@ class Home extends Component {
 }
 
 export default Home;
-
-//     <div
-//       className="animated fadeIn"
-//       style={{
-//         animationDuration: '3s',
-//         display: 'flex',
-//         flexDirection: 'column',
-//         alignItems: 'center'
-//       }}
-//     >

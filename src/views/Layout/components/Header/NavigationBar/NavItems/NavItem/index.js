@@ -13,7 +13,7 @@ const NavItem = ({
   <li>
     <NavLink
       {...rest}
-      className={classNames(cx('nav-link'), cssClass)}
+      className={cx('nav-link', cssClass)}
       activeClassName={cx('nav-link--active')}
       to={{
         pathname: to,
