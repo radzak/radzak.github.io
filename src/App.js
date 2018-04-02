@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Transitions from '@/views/components/Transitions';
 import Layout from '@/views/Layout';
@@ -43,12 +43,13 @@ class App extends Component {
       <Layout>
         <Transitions pageKey={location.pathname} {...location.state}>
           <Switch location={location}>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/home" component={Home} />
             <Route exact path="/about" component={About} />
             <Route exact path="/skills" component={Skills} />
             <Route exact path="/projects" component={Projects} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/cv" component={CV} />
+            <Redirect to="/home" />
           </Switch>
         </Transitions>
       </Layout>
