@@ -20,7 +20,7 @@ const NavItems = () => (
     />
     <NavItem
       exact
-      to="about"
+      to="/about"
       transition={slide}
       text="About"
       icon="fas fa-user"

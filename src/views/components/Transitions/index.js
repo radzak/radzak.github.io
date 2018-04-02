@@ -2,9 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-import './scale/styles.css';
-import './slide/styles.css';
-// TODO: export transitions as an object to avoid mistyping duration
+const wrapperStyles = {
+  perspective: '1200px',
+  width: '100%',
+  height: '100%',
+  pointerEvents: 'none'
+};
 
 // the childFactory allows to change the transition of the leaving component
 // https://github.com/reactjs/react-transition-group/issues/182
@@ -13,14 +16,15 @@ const childFactoryCreator = props => child => React.cloneElement(child, props);
 const Transitions = ({
   transitionName, duration, pageKey, children
 }) => (
-  <div style={{ perspective: '1200px', width: '100%', height: '100%' }}>
+  <div style={wrapperStyles}>
     <TransitionGroup
       childFactory={childFactoryCreator({ classNames: transitionName, timeout: duration })}
+      component={null} // https://reactcommunity.org/react-transition-group/transition-group#TransitionGroup-prop-component
     >
       <CSSTransition key={pageKey} timeout={duration}>
         {/* you should wrap CSSTransition child in a div in case it could be null
       see https://github.com/reactjs/react-transition-group/issues/208 */}
-        <div>{children}</div>
+        {children}
       </CSSTransition>
     </TransitionGroup>
   </div>

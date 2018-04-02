@@ -1,3 +1,5 @@
+import './styles.css';
+
 const transitionClassName = 'scale-transition';
 const duration = 600;
 

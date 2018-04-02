@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: 3.125em 1fr;
   grid-template-areas: 'header main';
-  background-color: black;
+  // background-color: black;
 
   @include for-tablet-landscape-up {
     grid-template-columns: 1fr;
@@ -36,16 +36,7 @@
 
 .main {
   overflow: hidden;
-
-  grid-column-start: header;
-  grid-column-end: main;
-  grid-row: 1;
-
-  @include for-tablet-landscape-up {
-    grid-row-start: header;
-    grid-row-end: main;
-    grid-column: 1;
-  }
+  grid-area: main;
 }
 
 // .footer {

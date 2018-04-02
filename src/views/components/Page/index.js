@@ -6,19 +6,23 @@ import styles from './styles.css';
 
 const cx = classNames.bind(styles);
 
-const Page = ({ color, children, ...rest }) => (
-  <div className={cx('page')} style={{ backgroundColor: color, ...rest }}>
+const Page = ({
+  color, children, pointerEvents, ...rest
+}) => (
+  <div className={cx('page')} style={{ pointerEvents, ...rest }}>
     {children}
   </div>
 );
 
 Page.propTypes = {
   color: PropTypes.string,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  pointerEvents: PropTypes.oneOfType('none', 'auto')
 };
 
 Page.defaultProps = {
-  color: ''
+  color: '',
+  pointerEvents: 'none'
 };
 
 export default Page;
