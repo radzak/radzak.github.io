@@ -10,7 +10,16 @@ const cx = classNames.bind(styles);
 const NavItems = () => (
   <nav className={cx('nav-items')}>
     <NavItem exact to="/" text="Home" icon="fas fa-home" cssClass="hvr-icon-push" />
-    <NavItem exact to="/about" text="About" icon="fas fa-user" cssClass="hvr-icon-push" />
+    <NavItem
+      exact
+      to={{
+        pathname: '/about',
+        state: { transition: 'slide-transition', duration: 1000 }
+      }}
+      text="About"
+      icon="fas fa-user"
+      cssClass="hvr-icon-push"
+    />
     <NavItem exact to="/skills" text="Skills" icon="fas fa-terminal" cssClass="hvr-icon-push" />
     <NavItem
       exact

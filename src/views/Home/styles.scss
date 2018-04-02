@@ -1,12 +1,12 @@
 @import 'styles/placeholders.scss';
 
-.home-banner {
+.banner {
   @extend %centered;
   color: var(--primary-text-color-active);
   user-select: none;
 }
 
-.home-banner h1 {
+.banner h1 {
   font-family: 'Montserrat', sans-serif;
   color: #cacaca;
   font-size: 3.625em;
@@ -17,7 +17,7 @@
   display: inline-block;
 }
 
-.home-banner h2 {
+.banner h2 {
   // color: #8d8d8d;
   margin-top: 9px;
   font-size: 1.4em;

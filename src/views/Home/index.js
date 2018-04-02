@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import classNames from 'classnames/bind';
 
+import Page from '@/views/components/Page';
 import Typewriter from '@/components/Typewriter';
 import BouncyText from '@/components/BouncyText';
 import styles from './styles.css';
@@ -28,24 +29,25 @@ class Home extends Component {
 
   render() {
     return (
-      <div className={cx('home-banner')}>
-        {this.state.typing ? (
-          <h1>
-            <br />
-            <Typewriter words={this.words} period={800} onFinish={this.handleTypingFinish} />
-          </h1>
-        ) : (
-          <Fragment>
+      <Page color="#252627">
+        <div className={cx('banner')}>
+          {this.state.typing ? (
             <h1>
-              <BouncyText text="Hi!" />
-              <br />
-              My name is Radek Krzak
+              <Typewriter words={this.words} period={800} onFinish={this.handleTypingFinish} />
             </h1>
-            <br />
-            <h2>and I&apos;m a Full Stack Developer</h2>
-          </Fragment>
-        )}
-      </div>
+          ) : (
+            <Fragment>
+              <h1>
+                <BouncyText text="Hi!" />
+                <br />
+                My name is Radek Krzak
+              </h1>
+              <br />
+              <h2>and I&apos;m a Full Stack Developer</h2>
+            </Fragment>
+          )}
+        </div>
+      </Page>
     );
   }
 }

@@ -1,6 +1,6 @@
 @import 'styles/placeholders.scss';
 
-.home-banner {
+.banner {
   @extend %centered;
   color: var(--primary-text-color);
   font-variant: small-caps;

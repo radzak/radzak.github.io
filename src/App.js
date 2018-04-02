@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 
+import Transitions from '@/views/components/Transitions';
 import Layout from '@/views/Layout';
 import Home from '@/views/Home';
 import About from '@/views/About';
@@ -27,6 +29,7 @@ class App extends Component {
 
   render() {
     const { loading } = this.state;
+    const { location } = this.props;
 
     if (loading) {
       return null;
@@ -34,13 +37,19 @@ class App extends Component {
 
     return (
       <Layout>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-        </Switch>
+        <Transitions pageKey={location.pathname} {...location.state}>
+          <Switch location={location}>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+          </Switch>
+        </Transitions>
       </Layout>
     );
   }
 }
+
+App.propTypes = {
+  location: PropTypes.shape({}).isRequired
+};
 
 export default App;

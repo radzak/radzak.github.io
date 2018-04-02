@@ -1,0 +1,48 @@
+// global keyframes issue: https://github.com/css-modules/css-modules/issues/141
+
+$transitionClassName: 'slide-transition';
+$duration: 1000;
+
+:global {
+  .#{$transitionClassName}-exit-active {
+    background-color: #252627;
+    :local {
+      animation: slideOut #{$duration}ms both ease;
+    }
+  }
+  .#{$transitionClassName}-enter-active {
+    :local {
+      animation: slideIn #{$duration}ms both ease;
+    }
+  }
+}
+
+@keyframes slideOut {
+  0% {
+  }
+  25% {
+    opacity: 0.5;
+    transform: translateZ(-500px);
+  }
+  75%,
+  100% {
+    opacity: 0.5;
+    transform: translateZ(-500px) translateX(-200%);
+  }
+}
+
+@keyframes slideIn {
+  0%,
+  25% {
+    opacity: 0.5;
+    transform: translateZ(-500px) translateX(200%);
+  }
+  75% {
+    opacity: 0.5;
+    transform: translateZ(-500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0) translateX(0);
+  }
+}
