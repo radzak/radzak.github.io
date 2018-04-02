@@ -13,9 +13,9 @@ const Layout = props => (
     <div className={cx('overlay')}>
       <Particles />
     </div>
-    <div className={cx('header')}>
+    <header className={cx('header')}>
       <Header />
-    </div>
+    </header>
     <main className={cx('main')}>{props.children}</main>
   </div>
 );
