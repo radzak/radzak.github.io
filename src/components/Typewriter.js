@@ -8,9 +8,15 @@ class Typewriter extends Component {
     isDeleting: false
   };
 
-  componentDidMount = () => {
+  componentDidMount() {
     this.tick();
-  };
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.nextTick);
+  }
+
+  nextTick = null;
 
   tick() {
     const { words, period, infinite } = this.props;
@@ -43,7 +49,7 @@ class Typewriter extends Component {
       delta = 500;
     }
 
-    setTimeout(() => {
+    this.nextTick = setTimeout(() => {
       this.tick();
     }, delta);
   }
