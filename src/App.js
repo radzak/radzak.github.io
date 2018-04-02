@@ -6,6 +6,10 @@ import Transitions from '@/views/components/Transitions';
 import Layout from '@/views/Layout';
 import Home from '@/views/Home';
 import About from '@/views/About';
+import Skills from '@/views/Skills';
+import Projects from '@/views/Projects';
+import Contact from '@/views/Contact';
+import CV from '@/views/CV';
 
 class App extends Component {
   state = {
@@ -41,6 +45,10 @@ class App extends Component {
           <Switch location={location}>
             <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
+            <Route exact path="/skills" component={Skills} />
+            <Route exact path="/projects" component={Projects} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/cv" component={CV} />
           </Switch>
         </Transitions>
       </Layout>

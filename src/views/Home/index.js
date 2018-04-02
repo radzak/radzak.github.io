@@ -19,7 +19,7 @@ class Home extends Component {
 
   words = [
     'Hey!',
-    'Are you looking for \nsomeone',
+    'Are you looking for someone',
     'smart?',
     'curious?',
     'ingenious?',
