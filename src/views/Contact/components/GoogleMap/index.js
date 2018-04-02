@@ -3,16 +3,19 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-map
 
 import mapStyles from './styles.json';
 
-const Map = withScriptjs(withGoogleMap(({ isMarkerShown, location, styles }) => (
-  <GoogleMap defaultZoom={10} defaultCenter={location} defaultOptions={{ styles }}>
-    {isMarkerShown && <Marker position={location} />}
+const Map = withScriptjs(withGoogleMap(({
+  isMarkerShown, centerLocation, markerLocations, styles
+}) => (
+  <GoogleMap defaultZoom={6} defaultCenter={centerLocation} defaultOptions={{ styles }}>
+    {isMarkerShown && markerLocations.map(location => <Marker position={location} />)}
   </GoogleMap>
 )));
 
 const ConnectedMap = () => (
   <Map
     isMarkerShown
-    location={{ lat: 52.271354, lng: 17.007668 }}
+    markerLocations={[{ lat: 52.271354, lng: 17.007668 }, { lat: 50.070521, lng: 19.93884 }]}
+    centerLocation={{ lat: 51.93273, lng: 19.175577 }}
     googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
     loadingElement={<div style={{ height: '100%' }} />}
     containerElement={<div style={{ height: '100%' }} />}

@@ -59,6 +59,14 @@
   },
   {
     "featureType": "administrative.locality",
+    "stylers": [
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.locality",
     "elementType": "labels.text.fill",
     "stylers": [
       {
@@ -72,15 +80,6 @@
     "stylers": [
       {
         "color": "#757575"
-      }
-    ]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#181818"
       }
     ]
   },
@@ -170,7 +169,7 @@
     "elementType": "geometry",
     "stylers": [
       {
-        "color": "#000000"
+        "color": "#a9a9a9"
       }
     ]
   },

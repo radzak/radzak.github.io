@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 
 const Contact = props => (
   <Page color="#252627">
-    <div className={cx('contact-row')}>
+    <div className={cx('contact-container')}>
       <div className={cx('info')}>
         <p>radek.krzak@gmail.com</p>
       </div>
