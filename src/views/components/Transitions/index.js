@@ -11,11 +11,11 @@ import './slide/styles.css';
 const childFactoryCreator = props => child => React.cloneElement(child, props);
 
 const Transitions = ({
-  transition, duration, pageKey, children
+  transitionName, duration, pageKey, children
 }) => (
   <div style={{ perspective: '1200px', width: '100%', height: '100%' }}>
     <TransitionGroup
-      childFactory={childFactoryCreator({ classNames: transition, timeout: duration })}
+      childFactory={childFactoryCreator({ classNames: transitionName, timeout: duration })}
     >
       <CSSTransition key={pageKey} timeout={duration}>
         {/* you should wrap CSSTransition child in a div in case it could be null
@@ -27,15 +27,17 @@ const Transitions = ({
 );
 
 Transitions.propTypes = {
-  transition: PropTypes.string,
+  transitionName: PropTypes.string,
   duration: PropTypes.number,
   pageKey: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired
 };
 
 Transitions.defaultProps = {
-  transition: '',
+  transitionName: '',
   duration: 0
 };
 
 export default Transitions;
+export { default as scale } from './scale';
+export { default as slide } from './slide';

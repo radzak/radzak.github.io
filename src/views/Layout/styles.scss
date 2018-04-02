@@ -7,7 +7,6 @@
   grid-template-columns: 3.125em 1fr;
   grid-template-areas: 'header main';
   background-color: black;
-  overflow: hidden;
 
   @include for-tablet-landscape-up {
     grid-template-columns: 1fr;
@@ -36,6 +35,8 @@
 }
 
 .main {
+  overflow: hidden;
+
   grid-column-start: header;
   grid-column-end: main;
   grid-row: 1;
