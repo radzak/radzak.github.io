@@ -17,7 +17,7 @@ const Page = ({
 Page.propTypes = {
   color: PropTypes.string,
   children: PropTypes.node.isRequired,
-  pointerEvents: PropTypes.oneOfType('none', 'auto')
+  pointerEvents: PropTypes.oneOf(['none', 'auto'])
 };
 
 Page.defaultProps = {
