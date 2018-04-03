@@ -1,21 +1,61 @@
+@import 'styles/placeholders.scss';
 @import 'styles/breakpoints.scss';
 
 .contact-container {
   display: flex;
   height: 100%;
-  pointer-events: all;
   flex-direction: column;
 
   @include for-tablet-landscape-up {
     flex-direction: row;
   }
 
-  .info {
+  .info-section {
     flex: 1;
+    @extend %flexCentered;
+    flex-direction: column;
+    text-align: center;
+    user-select: none;
+
+    .heading {
+      pointer-events: all;
+      margin-bottom: var(--padding-small-2);
+
+      h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.6em;
+        color: #cacaca;
+      }
+    }
+
+    p,
+    a {
+      font-size: 1.1em;
+      font-family: 'Lato', sans-serif;
+      color: #8a8a8a;
+    }
+
+    .content {
+      pointer-events: all;
+    }
   }
 
-  .map {
+  .map-section {
     flex: 1;
     position: relative;
+    pointer-events: all;
+    margin-bottom: var(--padding-medium);
+    animation: fadeIn 2s ease-out;
+
+    @keyframes fadeIn {
+      0%,
+      50% {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
   }
 }

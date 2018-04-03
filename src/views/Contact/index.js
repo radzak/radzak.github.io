@@ -8,12 +8,24 @@ import styles from './styles.css';
 const cx = classNames.bind(styles);
 
 const Contact = props => (
-  <Page color="#252627">
+  <Page>
     <div className={cx('contact-container')}>
-      <div className={cx('info')}>
-        <p>radek.krzak@gmail.com</p>
+      <div className={cx('info-section')}>
+        <div className={cx('heading')}>
+          <h2>Let&apos;s talk</h2>
+        </div>
+        <div className={cx('content')}>
+          <p>
+            I am available both in <strong>Poznan</strong> and <strong>Krakow</strong>.<br />
+            Wanna get in touch or talk about a project?<br />
+            Feel free to contact me via email at{' '}
+            <span className="fancy">
+              <strong><a href="mailto:radek.krzak@gmail.com">radek.krzak@gmail.com</a></strong>
+            </span>
+          </p>
+        </div>
       </div>
-      <div className={cx('map')}>
+      <div className={cx('map-section')}>
         <GoogleMap />
       </div>
     </div>
