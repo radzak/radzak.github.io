@@ -1,6 +1,6 @@
 import './styles.css';
 
 const transitionClassName = 'scale-transition';
-const duration = 600;
+const duration = 1000;
 
 export default { transitionName: transitionClassName, duration };
