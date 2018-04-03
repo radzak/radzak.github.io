@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 const Page = ({
   color, children, pointerEvents, ...rest
 }) => (
-  <div className={cx('page')} style={{ pointerEvents, ...rest }}>
+  <div className={cx('page')} style={{ pointerEvents, backgroundColor: color, ...rest }}>
     {children}
   </div>
 );

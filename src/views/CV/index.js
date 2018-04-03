@@ -7,7 +7,7 @@ import styles from './styles.css';
 const cx = classNames.bind(styles);
 
 const CV = props => (
-  <Page color="#252627">
+  <Page>
     <div className={cx('banner')}>
       <h1>CV</h1>
     </div>

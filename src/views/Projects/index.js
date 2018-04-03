@@ -7,7 +7,7 @@ import styles from './styles.css';
 const cx = classNames.bind(styles);
 
 const Projects = props => (
-  <Page color="#252627">
+  <Page>
     <div className={cx('banner')}>
       <h1>Projects</h1>
     </div>

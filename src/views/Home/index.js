@@ -19,7 +19,7 @@ class Home extends Component {
 
   words = [
     'Hey!',
-    'Are you looking for someone',
+    'Looking for someone',
     'smart?',
     'curious?',
     'ingenious?',
@@ -29,7 +29,7 @@ class Home extends Component {
 
   render() {
     return (
-      <Page color="#252627">
+      <Page>
         <div className={cx('banner')}>
           {this.state.typing ? (
             <h1>
