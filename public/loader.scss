@@ -6,25 +6,21 @@ html,
 body {
   margin: 0px;
   padding: 0px;
-  border: 0px;
-}
-
-html {
-  height: 100%;
 }
 
 body {
-  min-height: 100%;
+  // temporarily set the background color on body element here in the loader,
+  // because due to the face the loader appears for the fixed amount of time before App is mounted
+  // to #root there is a flash of the default html/body background color visible before App loads
   background-color: $background_color;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 #loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   color: $primary_color;
   transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 436ms;
   opacity: 1;
@@ -101,6 +97,12 @@ ul {
   50% {
     background: rgba(2, 254, 255, 0.3);
   }
+}
+
+.marks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 @for $i from 1 through 60 {
