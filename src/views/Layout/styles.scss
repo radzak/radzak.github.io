@@ -1,12 +1,10 @@
 @import 'styles/breakpoints.scss';
 
 .container {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
   display: grid;
   grid-template-columns: 3.125em 1fr;
   grid-template-areas: 'header main';
-  // background-color: black;
 
   @include for-tablet-landscape-up {
     grid-template-columns: 1fr;
