@@ -1,8 +1,11 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 
+import { AwesomeButtonSocial } from 'react-awesome-button';
+import '@/styles/react-awesome-button.css';
 import Page from '@/views/components/Page';
 import GoogleMap from './components/GoogleMap';
+
 import styles from './styles.css';
 
 const cx = classNames.bind(styles);
@@ -25,6 +28,12 @@ const Contact = props => (
               </strong>
             </span>
           </p>
+        </div>
+        <div className={cx('social')}>
+          <AwesomeButtonSocial type="facebook">Facebook</AwesomeButtonSocial>
+          <AwesomeButtonSocial type="twitter">Twitter</AwesomeButtonSocial>
+          <AwesomeButtonSocial type="linkedin">LinkedIn</AwesomeButtonSocial>
+          <AwesomeButtonSocial type="github">Github</AwesomeButtonSocial>
         </div>
       </div>
       <div className={cx('map-section')}>
