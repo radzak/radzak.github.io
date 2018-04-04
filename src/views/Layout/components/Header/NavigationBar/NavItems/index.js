@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 
-import { scale } from '@/views/components/Transitions';
+import { slide } from '@/views/components/Transitions';
 import NavItem from './NavItem';
 
 import styles from './styles.css';
@@ -13,7 +13,7 @@ const NavItems = () => (
     <NavItem
       exact
       to="/home"
-      transition={scale}
+      transition={slide}
       text="Home"
       icon="fas fa-home"
       cssClass="hvr-icon-push"
@@ -21,7 +21,7 @@ const NavItems = () => (
     <NavItem
       exact
       to="/about"
-      transition={scale}
+      transition={slide}
       text="About"
       icon="fas fa-user"
       cssClass="hvr-icon-push"
@@ -29,7 +29,7 @@ const NavItems = () => (
     <NavItem
       exact
       to="/skills"
-      transition={scale}
+      transition={slide}
       text="Skills"
       icon="fas fa-terminal"
       cssClass="hvr-icon-push"
@@ -37,7 +37,7 @@ const NavItems = () => (
     <NavItem
       exact
       to="/projects"
-      transition={scale}
+      transition={slide}
       text="Projects"
       icon="fas fa-briefcase"
       cssClass="hvr-icon-push"
@@ -45,7 +45,7 @@ const NavItems = () => (
     <NavItem
       exact
       to="/contact"
-      transition={scale}
+      transition={slide}
       text="Contact"
       icon="fas fa-envelope"
       cssClass="hvr-icon-push"
@@ -53,7 +53,7 @@ const NavItems = () => (
     <NavItem
       exact
       to="/cv"
-      transition={scale}
+      transition={slide}
       text="CV"
       icon="fas fa-address-card"
       cssClass="hvr-icon-push"

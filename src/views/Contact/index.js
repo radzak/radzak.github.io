@@ -20,7 +20,9 @@ const Contact = props => (
             Wanna get in touch or talk about a project?<br />
             Feel free to contact me via email at{' '}
             <span className="fancy">
-              <strong><a href="mailto:radek.krzak@gmail.com">radek.krzak@gmail.com</a></strong>
+              <strong>
+                <a href="mailto:radek.krzak@gmail.com">radek.krzak@gmail.com</a>
+              </strong>
             </span>
           </p>
         </div>
