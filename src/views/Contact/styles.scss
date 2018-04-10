@@ -3,19 +3,24 @@
 
 .contact-container {
   display: flex;
-  height: 100%;
   flex-direction: column;
+  height: 100%;
 
   @include for-tablet-landscape-up {
     flex-direction: row;
   }
 
   .info-section {
-    flex: 1;
+    flex: 1 0 auto;
     @extend %flexCentered;
     flex-direction: column;
     text-align: center;
     user-select: none;
+    margin: var(--padding-large);
+
+    @include for-tablet-landscape-up {
+      min-width: 50%;
+    }
 
     .heading {
       pointer-events: all;
@@ -44,16 +49,20 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 1em;
-      margin-top: 2em;
+      margin-top: var(--padding-large);
     }
   }
 
   .map-section {
-    flex: 1;
-    position: relative;
+    flex: 1 0 0;
+    min-height: 50%;
     pointer-events: all;
     margin-bottom: var(--padding-medium);
     animation: fadeIn 2s ease-out;
+
+    @include for-tablet-landscape-up {
+      min-width: 50%;
+    }
 
     @keyframes fadeIn {
       0%,

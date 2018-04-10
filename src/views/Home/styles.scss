@@ -15,6 +15,7 @@
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
   white-space: nowrap;
   display: inline-block;
+  pointer-events: all;
 }
 
 .banner h2 {
@@ -24,6 +25,7 @@
   font-family: 'PT Sans Narrow', sans-serif;
   letter-spacing: 3px;
   display: inline-block;
+  pointer-events: all;
 
   mask-image: linear-gradient(
     -75deg,
