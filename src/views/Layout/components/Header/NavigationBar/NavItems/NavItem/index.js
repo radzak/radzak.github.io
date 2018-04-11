@@ -21,7 +21,7 @@ const NavItem = ({
       }}
     >
       <i className={classNames(icon, 'hvr-icon')} />
-      <span className={cx('nav-link-caption')}>{text}</span>
+      {/* <span className={cx('nav-link-caption')}>{text}</span> */}
     </NavLink>
   </li>
 );

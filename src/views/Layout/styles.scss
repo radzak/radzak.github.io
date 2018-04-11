@@ -8,7 +8,7 @@
 
   @include for-tablet-landscape-up {
     grid-template-columns: 1fr;
-    grid-template-rows: 5.5em 1fr;
+    grid-template-rows: 3.125em 1fr;
     grid-template-areas:
       'header'
       'main';
@@ -34,7 +34,7 @@
 
 .main {
   grid-area: main;
-  overflow: hidden;
+  overflow-x: hidden; // page transitions cause a x-scrollbar to appear
 }
 
 // .footer {
