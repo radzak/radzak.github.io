@@ -9,9 +9,9 @@ const cx = classNames.bind(styles);
 const Page = ({
   color, children, pointerEvents, ...rest
 }) => (
-  <div className={cx('page')} style={{ pointerEvents, backgroundColor: color, ...rest }}>
+  <section className={cx('page')} style={{ pointerEvents, backgroundColor: color, ...rest }}>
     {children}
-  </div>
+  </section>
 );
 
 Page.propTypes = {

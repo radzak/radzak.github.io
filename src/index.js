@@ -7,6 +7,7 @@ import './styles/constants.css';
 import './styles/classes.css';
 import './styles/effects.css';
 import './styles/colors.css';
+import './styles/react-awesome-button.css';
 
 import App from './App';
 

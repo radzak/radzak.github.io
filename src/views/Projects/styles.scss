@@ -1,0 +1,45 @@
+@import 'styles/breakpoints.scss';
+
+.wrapper {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+
+  @include for-tablet-portrait-up {
+    // text-align: initial;
+  }
+
+  @include for-tablet-landscape-up {
+    max-width: 700px;
+  }
+
+  .heading {
+    margin: 0 var(--padding-large-2);
+
+    h3 {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.15em;
+      line-height: 1.7em;
+      color: #8a8a8a;
+      word-spacing: 0.02em;
+    }
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    width: 100%;
+    list-style: none;
+
+    @include for-tablet-landscape-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-item {
+      display: block;
+      padding: var(--padding-large);
+      width: 100%;
+    }
+  }
+}

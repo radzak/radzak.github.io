@@ -1,0 +1,310 @@
+@import 'styles/breakpoints.scss';
+
+:global {
+  // RESETS
+  * html .clearfix {
+    zoom: 1;
+  } /* IE6 */
+  *:first-child + html .clearfix {
+    zoom: 1;
+  } /* IE7 */
+  .clearfix:before,
+  .clearfix:after {
+    content: '';
+    display: table;
+  }
+  .clearfix:after {
+    clear: both;
+  }
+  .clearfix {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+  }
+
+  // VARIABLES
+  $mainblack: #22262b;
+  $amain: #fbb053;
+  $grisclaro: #e0e2e2;
+  $display: #abadc6;
+  $item: #d1c9bf;
+  $codred: #ac5e47;
+
+  // MISC
+  .fixed-ratio {
+    display: block;
+    position: relative;
+    width: 100%;
+
+    &:after {
+      padding-top: 56.25%;
+      /* 16:9 ratio */
+      display: block;
+      content: '';
+    }
+  }
+  .wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .comp {
+    width: 100%;
+    height: 95.8%;
+    // height: 194px;
+    text-align: center;
+    transition: transform 0.4s ease-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .monitor {
+      width: 76.4%;
+      height: 93.3%;
+      // width: 275px;
+      // height: 181px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px 10px 0px 0px;
+      box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+      padding: 9px;
+      border: solid 1px $grisclaro;
+      border-bottom: 0px;
+      background-color: black;
+    }
+    .mid {
+      float: left;
+      display: block;
+      height: 100%;
+      position: relative;
+      background-color: $display;
+      width: 50%;
+      &.codigo {
+        background-color: $mainblack;
+        overflow: hidden;
+      }
+
+      &.fullscreen {
+        width: 100%;
+      }
+    }
+    .site {
+      overflow: hidden;
+      position: absolute;
+      width: 82.4%;
+      // width: 105px;
+      height: 85.2%;
+      // height: 138px;
+      bottom: 0;
+      right: 0;
+
+      &.centered {
+        width: 58.8%;
+        // width: 150px;
+        right: 50%;
+        transform: translateX(50%);
+      }
+
+      .topbar {
+        width: 100%;
+      }
+      .cerrar {
+        width: 100%;
+        padding: 3px;
+        line-height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 4px 4px 0px 0px;
+        background-color: #afa895;
+        & > div {
+          display: inline-block;
+          width: 2px;
+          height: 2px;
+          border-radius: 50%;
+          background: white;
+          margin: 0px 1px;
+        }
+      }
+      .inhead {
+        padding: 2px;
+        height: 5px;
+        background-color: #ddd8cf;
+        .item {
+          width: 10px;
+          height: 1px;
+          background-color: $item;
+          margin: 0 1px;
+          display: block;
+          float: left;
+        }
+      }
+    }
+    .txr {
+      text-align: right;
+      .item {
+        float: right;
+      }
+    }
+    .inslid {
+      width: 100%;
+      height: 33px;
+      background-color: #efebe2;
+
+      h5 {
+        font-size: 0.7em;
+        color: black;
+
+        @include for-tablet-portrait-up {
+          font-size: 0.8em;
+        }
+      }
+    }
+    .incont {
+      padding-top: 10px;
+      background: #fefaf0;
+      .item {
+        background-color: $item;
+        width: 53px;
+        height: 2px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 1px;
+        &:nth-child(1) {
+          width: 20px;
+        }
+        &:nth-child(2) {
+          margin-top: 3px;
+          width: 41px;
+        }
+        &:nth-child(3) {
+          width: 32px;
+        }
+        &:nth-child(4) {
+          width: 23px;
+        }
+      }
+      .wid {
+        width: 100%;
+        padding: 8px 1px;
+        .itwid {
+          width: 33.333%;
+          float: left;
+          height: 26px;
+          padding: 0px 3px;
+          & > div {
+            width: 100%;
+            height: 100%;
+            background-color: #f5f1e6;
+            position: relative;
+            .contfoot {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              height: 6px;
+              width: 100%;
+              background-color: #ebe5dc;
+            }
+          }
+        }
+      }
+      .infoot {
+        background-color: #efebe2;
+        height: 26px;
+        width: 100%;
+      }
+    }
+    @keyframes code {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.6;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    .codigo {
+      padding: 14px 0px 14px 14px;
+      .var {
+        background-color: $codred;
+        :local {
+          animation: code 0.3s infinite;
+        }
+      }
+      .cont {
+        background-color: #464748;
+        :local {
+          animation: code 0.5s infinite;
+        }
+      }
+      .fun {
+        background-color: $amain;
+        :local {
+          animation: code 0.2s infinite;
+        }
+      }
+      .atr {
+        background-color: #645572;
+        :local {
+          animation: code 0.1s infinite;
+        }
+      }
+      .item {
+        height: 3px;
+        width: 20px;
+        float: left;
+        margin-right: 3px;
+        &.min {
+          width: 13px;
+        }
+        &.lrg {
+          width: 30px;
+        }
+      }
+      .line {
+        padding: 2px 0;
+        width: 100%;
+      }
+      .tab1 {
+        padding-left: 5px;
+      }
+      .tab2 {
+        padding-left: 8px;
+      }
+      .tab3 {
+        padding-left: 10px;
+      }
+      .tab4 {
+        padding-left: 12px;
+      }
+    }
+  }
+
+  .base {
+    width: 93.9%;
+    // width: 338px;
+    height: 6.2%;
+    // height: 12px;
+    background: $grisclaro;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0px 0px 6px 6px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+
+    .handle {
+      margin: 0 auto;
+      width: 22.2%;
+      // width: 75px;
+      height: 41.7%;
+      // height: 5px;
+      border-radius: 0 0 5px 5px;
+      background: gray;
+    }
+  }
+}

@@ -6,7 +6,11 @@ import mapStyles from './styles.json';
 const Map = withScriptjs(withGoogleMap(({
   isMarkerShown, centerLocation, markerLocations, styles
 }) => (
-  <GoogleMap defaultZoom={6} defaultCenter={centerLocation} defaultOptions={{ styles }}>
+  <GoogleMap
+    defaultZoom={6}
+    defaultCenter={centerLocation}
+    defaultOptions={{ disableDefaultUI: true, styles }}
+  >
     {isMarkerShown && markerLocations.map(location => <Marker position={location} />)}
   </GoogleMap>
 )));

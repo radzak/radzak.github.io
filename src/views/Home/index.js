@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import classNames from 'classnames/bind';
+import { AwesomeButton } from 'react-awesome-button';
 
+import { scale } from '@/views/components/Transitions';
 import Page from '@/views/components/Page';
-import BouncyText from '@/components/BouncyText';
 import styles from './styles.css';
 
 const cx = classNames.bind(styles);
@@ -14,10 +16,22 @@ class Home extends Component {
       <Page>
         <div className={cx('banner')}>
           <h1>
-            <BouncyText text="Hi!" />
+            Hello, I&apos;m <span>Radek Krzak</span>.
           </h1>
-          <h1>My name is Radek Krzak</h1>
-          <h2>and I&apos;m a Full Stack Developer</h2>
+          <br />
+          <h1>I&apos;m a full-stack developer.</h1>
+          <div className={cx('contact-button')}>
+            <NavLink
+              to={{
+                pathname: '/contact',
+                state: scale
+              }}
+            >
+              <AwesomeButton type="primary">
+                <i className="far fa-address-card" /> Contact me
+              </AwesomeButton>
+            </NavLink>
+          </div>
         </div>
       </Page>
     );

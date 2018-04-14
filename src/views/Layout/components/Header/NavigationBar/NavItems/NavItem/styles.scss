@@ -15,7 +15,7 @@
   color: var(--primary-text-color);
 
   @include for-tablet-landscape-up {
-    padding: 0 var(--padding-medium);
+    padding: 0 var(--padding-medium-2);
   }
 
   &:hover {

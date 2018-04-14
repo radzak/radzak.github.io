@@ -1,0 +1,63 @@
+@import 'styles/placeholders.scss';
+@import 'styles/breakpoints.scss';
+
+.modal-wrapper {
+  // center horizontally:
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 70%;
+  max-width: 500px;
+  margin: var(--padding-large-2) 0;
+  outline: none;
+
+  .modal {
+    background-color: #252627;
+
+    .modal-header {
+      display: flex;
+      background-color: var(--primary-color);
+      color: var(--primary-text-color);
+
+      .modal-title {
+        font-family: 'MontSerrat', sans-serif;
+        font-size: 1.6em;
+        padding: var(--padding-medium);
+        padding-left: var(--padding-large-2);
+      }
+
+      .close-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0 var(--padding-large-2);
+        margin-left: auto;
+        cursor: pointer;
+      }
+    }
+
+    .modal-content {
+      padding: var(--padding-large-2);
+    }
+  }
+}
+
+.overlay {
+  @extend %fullscreen;
+  z-index: 2; // over header, footer, etc.
+  overflow-y: auto;
+
+  // need to use :before or :after to make opacity work correctly
+  &:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.7;
+  }
+}

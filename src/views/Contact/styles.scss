@@ -1,12 +1,10 @@
 @import 'styles/placeholders.scss';
 @import 'styles/breakpoints.scss';
 
-.contact-container {
+.wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
-  pointer-events: all;
-  overflow-y: auto;
 
   @include for-tablet-landscape-up {
     flex-direction: row;
@@ -17,12 +15,14 @@
     flex: 1 0 auto;
     @extend %flexCentered;
     flex-direction: column;
+    margin: calc(2 * var(--padding-large)) var(--padding-large);
+
     text-align: center;
     user-select: none;
-    margin: calc(2 * var(--padding-large)) 0;
 
     @include for-tablet-landscape-up {
-      margin: 0 calc(2 * var(--padding-large));
+      flex: 1 0 auto;
+      margin: 0 var(--padding-large-2);
     }
 
     .heading {
@@ -30,21 +30,19 @@
       margin-bottom: var(--padding-small-2);
 
       h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.6em;
-        color: #cacaca;
+        font-size: 2.9em;
       }
     }
 
     .content {
       pointer-events: all;
 
-      p {
-        font-size: 1.1em;
-        font-family: 'Lato', sans-serif;
-        line-height: 1.45em;
-        color: #8a8a8a;
-      }
+      // p {
+      //   font-size: 1.2em;
+      //   font-family: 'Lato', sans-serif;
+      //   line-height: 1.45em;
+      //   color: #8a8a8a;
+      // }
 
       a {
         display: inline-block;
@@ -80,21 +78,25 @@
     .social {
       pointer-events: all;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, auto);
       grid-gap: 1em;
-      margin-top: var(--padding-large);
+      margin-top: var(--padding-large-2);
+
+      @include for-tablet-portrait-up {
+        grid-template-columns: repeat(4, auto);
+      }
     }
   }
 
   .map-section {
     flex: 0 0 70%;
     pointer-events: all;
-    margin: 0 var(--padding-medium);
+    margin: 0 var(--padding-small-2);
     animation: fadeIn 2s ease-out;
 
     @include for-tablet-landscape-up {
       flex: 0 1 50%;
-      margin: var(--padding-medium) 0;
+      margin: 0;
     }
 
     @keyframes fadeIn {
@@ -103,7 +105,8 @@
         opacity: 0;
       }
 
-      to {
+      80%,
+      100% {
         opacity: 1;
       }
     }

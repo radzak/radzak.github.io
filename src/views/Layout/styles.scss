@@ -3,12 +3,12 @@
 .container {
   height: 100%;
   display: grid;
-  grid-template-columns: 3.125em 1fr;
+  grid-template-columns: var(--header-size) 1fr;
   grid-template-areas: 'header main';
 
   @include for-tablet-landscape-up {
     grid-template-columns: 1fr;
-    grid-template-rows: 3.125em 1fr;
+    grid-template-rows: var(--header-size) 1fr;
     grid-template-areas:
       'header'
       'main';

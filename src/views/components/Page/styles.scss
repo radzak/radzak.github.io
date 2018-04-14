@@ -1,5 +1,13 @@
+@import 'styles/breakpoints.scss';
+
 .page {
   width: 100%;
   height: 100%;
   position: absolute;
+  overflow-y: auto;
+  padding: var(--padding-medium) 0;
+
+  @include for-tablet-landscape-up {
+    padding: var(--padding-large-2) 0;
+  }
 }

@@ -1,0 +1,46 @@
+.text {
+  section {
+    margin-bottom: 2em;
+
+    h2 {
+      display: block;
+      position: relative;
+      padding: 0;
+
+      font-size: 1.4em;
+      font-weight: 600;
+      line-height: 1.35em;
+      letter-spacing: -0.045em;
+      color: #cacaca;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.45em;
+      margin-bottom: 1em;
+      color: #8a8a8a;
+    }
+
+    ul {
+      list-style: circle;
+      padding: 0 1.4em;
+      margin-bottom: 0.6em;
+
+      li {
+        font-size: 1.1em;
+        line-height: 1.45em;
+        color: #8a8a8a;
+      }
+    }
+  }
+
+  hr {
+    display: block;
+    height: 1px;
+    width: 50%;
+    background-color: #484848;
+    position: relative;
+    border: 0;
+    margin: 0.5em 0 1em;
+  }
+}

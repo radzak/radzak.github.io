@@ -10,8 +10,8 @@ import styles from './styles.css';
 const cx = classNames.bind(styles);
 
 const Contact = props => (
-  <Page>
-    <div className={cx('contact-container')}>
+  <Page pointerEvents="auto">
+    <div className={cx('wrapper')}>
       <div className={cx('info-section')}>
         <div className={cx('heading')}>
           <h2>Let&apos;s talk</h2>
