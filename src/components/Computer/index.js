@@ -16,7 +16,8 @@ const Computer = ({ fullscreen, text, onClick }) => {
   });
 
   return (
-    <div className="fixed-ratio" onClick={onClick}>
+    // temporarily add presentation role to silence warnings
+    <div role="presentation" className="fixed-ratio" onClick={onClick} onKeyPress={onClick}>
       <div className="wrap">
         <div className="comp">
           <div className="monitor">

@@ -18,11 +18,11 @@ const Skills = props => (
             Lorizzle ipsizzle dolizzle mammasay mammasa mamma oo sa ghetto, dope adipiscing bizzle.
             Phat mammasay mammasa mamma oo sa velizzle, boofron volutpizzle, suscipizzle we gonna
             chung, brizzle my shizz, daahng dawg. Pellentesque egizzle cool. Sed erizzle. Away away
-            bling bling dapibus turpis tempizzle bizzle. Maurizzle i'm in the shizzle nibh izzle
-            turpizzle. Fo shizzle in tortizzle. Pellentesque eleifend rhoncus nisi. nizzle shiznit
-            the bizzle dictumst. Rizzle dapibus. Phat tellus dope, pretizzle eu, mattis brizzle,
-            eleifend vitae, nunc. Pizzle suscipizzle. Integer sempizzle velit mammasay mammasa mamma
-            oo sa purizzle.
+            bling bling dapibus turpis tempizzle bizzle. Maurizzle i&apos;m in the shizzle nibh
+            izzle turpizzle. Fo shizzle in tortizzle. Pellentesque eleifend rhoncus nisi. nizzle
+            shiznit the bizzle dictumst. Rizzle dapibus. Phat tellus dope, pretizzle eu, mattis
+            brizzle, eleifend vitae, nunc. Pizzle suscipizzle. Integer sempizzle velit mammasay
+            mammasa mamma oo sa purizzle.
           </p>
         </div>
       </div>

@@ -45,10 +45,12 @@ class Project extends Component {
               <div className={cx('modal-title')}>{name}</div>
               <div
                 className={cx('close-icon')}
+                role="presentation"
+                // TODO: handle tabbing over projects
                 // role="button"
                 // tabIndex={0}
                 onClick={this.closeModal}
-                // onKeyPress={this.closeModal}
+                onKeyPress={this.closeModal}
               >
                 <i className="fas fa-times" />
               </div>
