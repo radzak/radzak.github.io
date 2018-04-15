@@ -1,3 +1,5 @@
+@import 'styles/breakpoints.scss';
+
 /* Global Defaults */
 html,
 body {
@@ -32,15 +34,32 @@ h6 {
   font-weight: 700;
   font-size: inherit;
   color: var(--primary-text-color);
+  user-select: none;
 }
 
 h1 {
-  font-size: 2.625em;
+  font-size: 2.225em;
   line-height: 1.45em;
   letter-spacing: -1px;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
   user-select: none;
-  margin-bottom: 0.1em;
+  margin-bottom: 0.3em;
+
+  @include for-tablet-landscape-up {
+    font-size: 2.625em;
+  }
+}
+
+h2 {
+  font-size: 1.4em;
+  line-height: 1.35em;
+  letter-spacing: -0.045em;
+
+  @include for-tablet-landscape-up {
+    font-size: 1.4em;
+    line-height: 1.35em;
+    letter-spacing: -0.045em;
+  }
 }
 
 /* Text Styles */
@@ -66,10 +85,14 @@ textarea {
 }
 
 p {
-  font-size: 1.2em;
-  line-height: 1.45em;
   color: var(--secondary-text-color);
-  margin-bottom: 1em;
+  font-size: 1.1em;
+  line-height: 1.45em;
+  margin-bottom: 0.7em;
+
+  @include for-tablet-landscape-up {
+    font-size: 1.2em;
+  }
 }
 
 blockquote {

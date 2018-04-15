@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames/bind';
 
 import Page from '@/views/components/Page';
+import Logos from './components/Logos';
 
 import styles from './styles.css';
 
@@ -14,18 +15,22 @@ const About = props => (
         <div className={cx('content')}>
           <h1>About me</h1>
           <p>
-            Lorizzle ipsizzle dolizzle mammasay mammasa mamma oo sa ghetto, dope adipiscing bizzle.
-            Phat mammasay mammasa mamma oo sa velizzle, boofron volutpizzle, suscipizzle we gonna
-            chung, brizzle my shizz, daahng dawg. Pellentesque egizzle cool. Sed erizzle. Away away
-            bling bling dapibus turpis tempizzle bizzle. Maurizzle i'm in the shizzle nibh izzle
-            turpizzle. Fo shizzle in tortizzle. Pellentesque eleifend rhoncus nisi. nizzle shiznit
-            the bizzle dictumst. Rizzle dapibus. Phat tellus dope, pretizzle eu, mattis brizzle,
-            eleifend vitae, nunc. Pizzle suscipizzle. Integer sempizzle velit mammasay mammasa mamma
-            oo sa purizzle.
+            I&apos;m 20 years old self-taught programmer based in Poland. My main field of expertise
+            is Python, I’ve been fascinated by this language, ever since I started coding.
+          </p>
+          <p>
+            However, not long time ago I decided to broaden my horizons and expand my knowledge by
+            learning React and other related web technologies.
+          </p>
+          <p>
+            In my free time I like to contribute to Stack Overflow by answering questions related to
+            my interests such as web scraping.
           </p>
         </div>
       </div>
-      <div className={cx('media-section')} />
+      <div className={cx('media-section')}>
+        <Logos wrapperClass={cx('logo-grid')} logoClass={cx('logo')} />
+      </div>
     </div>
   </Page>
 );

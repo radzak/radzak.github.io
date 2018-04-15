@@ -9,13 +9,8 @@ const cx = classNames.bind(styles);
 
 const SocialMedia = props => (
   <ul className={cx('social-media')}>
+    <SocialLink link="https://github.com/radzak" icon="fab fa-github" />
     <SocialLink
-      // cssClass="animated fadeInLeft"
-      link="https://github.com/radzak"
-      icon="fab fa-github"
-    />
-    <SocialLink
-      // cssClass="animated fadeInLeft"
       link="https://www.linkedin.com/in/radek-krzak-13127511b/"
       icon="fab fa-linkedin-in"
     />

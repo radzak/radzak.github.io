@@ -8,17 +8,22 @@
 
   @include for-tablet-landscape-up {
     flex-direction: row;
-    pointer-events: none;
   }
 
   .info-section {
     flex: 1 0 auto;
     @extend %flexCentered;
     flex-direction: column;
-    margin: calc(2 * var(--padding-large)) var(--padding-large);
+    margin: 0 var(--padding-large);
+    margin-bottom: calc(2 * var(--padding-large));
 
     text-align: center;
     user-select: none;
+
+    @include for-tablet-portrait-up {
+      flex: 1 0 70%;
+      margin: 0 var(--padding-large-2);
+    }
 
     @include for-tablet-landscape-up {
       flex: 1 0 auto;
@@ -26,16 +31,12 @@
     }
 
     .heading {
-      pointer-events: all;
+      pointer-events: auto;
       margin-bottom: var(--padding-small-2);
-
-      h2 {
-        font-size: 2.9em;
-      }
     }
 
     .content {
-      pointer-events: all;
+      pointer-events: auto;
 
       // p {
       //   font-size: 1.2em;
@@ -76,7 +77,7 @@
     }
 
     .social {
-      pointer-events: all;
+      pointer-events: auto;
       display: grid;
       grid-template-columns: repeat(2, auto);
       grid-gap: 1em;
@@ -90,7 +91,7 @@
 
   .map-section {
     flex: 0 0 70%;
-    pointer-events: all;
+    pointer-events: auto;
     margin: 0 var(--padding-small-2);
     animation: fadeIn 2s ease-out;
 

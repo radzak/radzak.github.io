@@ -7,13 +7,18 @@
   left: 50%;
   transform: translateX(-50%);
 
-  width: 70%;
+  width: 85%;
   max-width: 500px;
-  margin: var(--padding-large-2) 0;
+  margin: var(--padding-medium-2) 0;
   outline: none;
 
+  @include for-tablet-landscape-up {
+    margin: var(--padding-large-2) 0;
+  }
+
   .modal {
-    background-color: #252627;
+    background-color: var(--background-color);
+    box-shadow: 5px 5px 0px 0px #020202a6;
 
     .modal-header {
       display: flex;
@@ -21,10 +26,15 @@
       color: var(--primary-text-color);
 
       .modal-title {
+        // TODO: use <h1>
         font-family: 'MontSerrat', sans-serif;
-        font-size: 1.6em;
+        font-size: 1.3em;
         padding: var(--padding-medium);
         padding-left: var(--padding-large-2);
+
+        @include for-tablet-landscape-up {
+          padding-left: var(--padding-medium-2);
+        }
       }
 
       .close-icon {
@@ -32,9 +42,13 @@
         justify-content: center;
         align-items: center;
 
-        padding: 0 var(--padding-large-2);
+        padding: 0 var(--padding-medium-2);
         margin-left: auto;
         cursor: pointer;
+
+        @include for-tablet-landscape-up {
+          padding: 0 var(--padding-large-2);
+        }
       }
     }
 

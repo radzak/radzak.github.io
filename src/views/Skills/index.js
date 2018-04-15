@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames/bind';
 
 import Page from '@/views/components/Page';
-import Logos from './components/Logos';
+import MyCloud from './components/MyCloud';
 
 import styles from './styles.css';
 
@@ -27,7 +27,7 @@ const Skills = props => (
         </div>
       </div>
       <div className={cx('media-section')}>
-        <Logos wrapperClass={cx('logo-grid')} logoClass={cx('logo')} />
+        <MyCloud />
       </div>
     </div>
   </Page>

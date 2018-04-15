@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import { AwesomeButton } from 'react-awesome-button';
 
@@ -15,22 +15,18 @@ class Home extends Component {
     return (
       <Page>
         <div className={cx('banner')}>
-          <h1>
-            Hello, I&apos;m <span>Radek Krzak</span>.
-          </h1>
+          <h1>Radek Krzak</h1>
           <br />
-          <h1>I&apos;m a full-stack developer.</h1>
+          <h2>Full stack developer</h2>
           <div className={cx('contact-button')}>
-            <NavLink
+            <Link
               to={{
                 pathname: '/contact',
                 state: scale
               }}
             >
-              <AwesomeButton type="primary">
-                <i className="far fa-address-card" /> Contact me
-              </AwesomeButton>
-            </NavLink>
+              <AwesomeButton type="primary">Contact me</AwesomeButton>
+            </Link>
           </div>
         </div>
       </Page>

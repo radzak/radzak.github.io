@@ -1,9 +1,34 @@
-.cv {
-  height: 100%;
+@import 'styles/placeholders.scss';
+@import 'styles/breakpoints.scss';
 
-  img {
-    display: block;
-    margin: auto;
-    height: 100%;
+.cv {
+  @extend %centered;
+  width: 100%;
+  text-align: center;
+  pointer-events: auto;
+
+  :global {
+    .aws-btn {
+      --button-default-height: 48px;
+      --button-default-font-size: 0.875em;
+      --button-default-border-radius: 2px;
+      --button-horizontal-padding: 20px;
+      --button-raise-level: 4px;
+      --button-hover-pressure: 2;
+      --transform-speed: 0.185s;
+      --button-primary-color: #424242;
+      --button-primary-color-dark: #212121;
+      --button-primary-color-light: #cacaca;
+      --button-primary-color-hover: #424242;
+      --button-primary-color-active: #424242;
+      --button-primary-border: none;
+      --button-font-family: 'MontSerrat';
+
+      @include for-tablet-portrait-up {
+        --button-default-font-size: 1.2em;
+        --button-default-height: 55.2px;
+        --button-horizontal-padding: 30.4px;
+      }
+    }
   }
 }

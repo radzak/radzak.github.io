@@ -9,22 +9,27 @@ const cx = classNames.bind(styles);
 
 const NavItem = ({
   cssClass, text, icon, to, transition, ...rest
-}) => (
-  <li>
-    <NavLink
-      {...rest}
-      className={cx('nav-link', cssClass)}
-      activeClassName={cx('nav-link--active')}
-      to={{
-        pathname: to,
-        state: transition
-      }}
-    >
-      <i className={classNames(icon, 'hvr-icon')} />
-      {/* <span className={cx('nav-link-caption')}>{text}</span> */}
-    </NavLink>
-  </li>
-);
+}) => {
+  const Icon = icon;
+
+  return (
+    <li>
+      <NavLink
+        {...rest}
+        className={cx('nav-link', cssClass)}
+        activeClassName={cx('nav-link--active')}
+        to={{
+          pathname: to,
+          state: transition
+        }}
+      >
+        <Icon className={cx('nav-link-icon', 'hvr-icon')} />
+        {/* <i className={classNames(icon, 'hvr-icon')} /> */}
+        <span className={cx('nav-link-caption')}>{text}</span>
+      </NavLink>
+    </li>
+  );
+};
 
 NavItem.propTypes = {
   cssClass: PropTypes.string,

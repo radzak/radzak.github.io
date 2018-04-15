@@ -14,7 +14,7 @@ const Contact = props => (
     <div className={cx('wrapper')}>
       <div className={cx('info-section')}>
         <div className={cx('heading')}>
-          <h2>Let&apos;s talk</h2>
+          <h1>Let&apos;s talk</h1>
         </div>
         <div className={cx('content')}>
           <p>

@@ -1,6 +1,9 @@
 @import 'styles/placeholders.scss';
 @import 'styles/breakpoints.scss';
 
+$transitionDelay: 1000ms;
+$logoCount: 6;
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -37,5 +40,61 @@
     @include for-tablet-landscape-up {
       flex: 0 0 50%;
     }
+
+    .logo-grid {
+      display: grid;
+      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+
+      margin-top: var(--padding-medium);
+
+      @include for-tablet-portrait-up {
+        grid-template-columns: repeat(3, 150px);
+        grid-template-rows: repeat(2, 150px);
+        grid-gap: 0px 40px;
+      }
+
+      @include for-tablet-landscape-up {
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: repeat(3, 150px);
+        grid-gap: 10px 50px;
+        margin-top: 0;
+      }
+
+      .logo {
+        animation: fadeIn 1s;
+        animation-fill-mode: both;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        @for $i from 1 through $logoCount {
+          &:nth-of-type(#{$i}) {
+            animation-delay: calc(#{$transitionDelay} + #{0.5 * ($i - 1)}s);
+          }
+        }
+
+        img {
+          width: 75%;
+
+          @include for-tablet-portrait-up {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
