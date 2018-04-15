@@ -12,7 +12,7 @@ class MyCloud extends Component {
   componentDidMount() {
     setInterval(() => {
       this.forceUpdate();
-    }, 3000);
+    }, 3800);
   }
 
   render() {
