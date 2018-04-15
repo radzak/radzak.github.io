@@ -20,7 +20,7 @@ const ConnectedMap = () => (
     isMarkerShown
     markerLocations={[{ lat: 52.271354, lng: 17.007668 }, { lat: 50.070521, lng: 19.93884 }]}
     centerLocation={{ lat: 51.93273, lng: 19.175577 }}
-    googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+    googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA41MS-4ke4fZCjrY1T7nTQENgOblP8jUc&v=3.exp&libraries=geometry,drawing,places"
     loadingElement={<div style={{ height: '100%' }} />}
     containerElement={<div style={{ height: '100%' }} />}
     mapElement={<div style={{ height: '100%' }} />}
