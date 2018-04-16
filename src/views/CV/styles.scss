@@ -21,7 +21,7 @@
       --button-primary-color-light: #cacaca;
       --button-primary-color-hover: #424242;
       --button-primary-color-active: #424242;
-      --button-primary-border: none;
+      --button-primary-border: 2px #cacaca63 solid;
       --button-font-family: 'MontSerrat';
 
       @include for-tablet-portrait-up {

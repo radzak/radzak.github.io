@@ -18,19 +18,23 @@
   }
 
   h1 {
-    font-family: 'PT Sans Narrow', sans-serif;
-    letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
+    font-size: 2.7em;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
+    letter-spacing: -1px;
+    margin-left: -2px;
     margin-bottom: 0;
     display: inline-block;
     pointer-events: auto;
 
     @include for-tablet-portrait-up {
+      font-size: 4em;
+      letter-spacing: -2px;
       white-space: nowrap;
     }
 
     @include for-tablet-landscape-up {
-      font-size: 4em;
+      font-size: 5em;
     }
   }
 
@@ -42,20 +46,17 @@
     pointer-events: auto;
 
     @include for-tablet-portrait-up {
+      font-size: 1.8em;
     }
 
     @include for-tablet-landscape-up {
-      font-size: 1.8em;
+      font-size: 2.4em;
     }
   }
 
   .contact-button {
-    margin-top: var(--padding-large);
+    margin-top: calc(2 * var(--padding-large));
     pointer-events: auto;
-
-    @include for-tablet-landscape-up {
-      margin-top: calc(2 * var(--padding-large));
-    }
 
     :global {
       .aws-btn {
@@ -71,8 +72,13 @@
         --button-primary-color-light: #cacaca;
         --button-primary-color-hover: #424242;
         --button-primary-color-active: #424242;
-        --button-primary-border: none;
+        --button-primary-border: 2px #cacaca63 solid;
         --button-font-family: 'MontSerrat';
+
+        @include for-tablet-landscape-up {
+          --button-default-font-size: 15px;
+          --button-horizontal-padding: 30px;
+        }
       }
     }
   }

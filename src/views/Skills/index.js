@@ -15,14 +15,14 @@ const Skills = props => (
         <div className={cx('content')}>
           <h1>Skills</h1>
           <p>
-            Lorizzle ipsizzle dolizzle mammasay mammasa mamma oo sa ghetto, dope adipiscing bizzle.
-            Phat mammasay mammasa mamma oo sa velizzle, boofron volutpizzle, suscipizzle we gonna
-            chung, brizzle my shizz, daahng dawg. Pellentesque egizzle cool. Sed erizzle. Away away
-            bling bling dapibus turpis tempizzle bizzle. Maurizzle i&apos;m in the shizzle nibh
-            izzle turpizzle. Fo shizzle in tortizzle. Pellentesque eleifend rhoncus nisi. nizzle
-            shiznit the bizzle dictumst. Rizzle dapibus. Phat tellus dope, pretizzle eu, mattis
-            brizzle, eleifend vitae, nunc. Pizzle suscipizzle. Integer sempizzle velit mammasay
-            mammasa mamma oo sa purizzle.
+            My current backend toolset includes Python, Django & Django Rest Framework. As for
+            frontend I use React along with Redux and Jest, Enzyme for testing.
+          </p>
+          <p>I also have experience with web-scraping using Python (mainly BeautifulSoup).</p>
+          <p>
+            Besides that I&apos;m a great fan of code review, pair programming and other
+            collaboration techniques. I find them very stimulating and helpful in refactoring
+            one&apos;s skills and habits.
           </p>
         </div>
       </div>

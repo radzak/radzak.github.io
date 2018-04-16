@@ -33,7 +33,7 @@ class MyCloud extends Component {
           <div>HTML5</div>
           <div>SCSS</div>
           <div>Redux</div>
-          <div>Redux Saga</div>
+          <div>Redux-Saga</div>
           <div>Git</div>
           <div>DRF</div>
           <div>Linux</div>

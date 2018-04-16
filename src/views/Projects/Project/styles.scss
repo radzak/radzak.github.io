@@ -6,6 +6,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  // TODO: center vertically if height is smaller than the screen, not otherwise !!
 
   width: 85%;
   max-width: 500px;
