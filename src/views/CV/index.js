@@ -8,12 +8,12 @@ import styles from './styles.css';
 
 const cx = classNames.bind(styles);
 
-const CV = props => (
+const CV = () => (
   <Page>
     <div className={cx('cv')}>
       <AwesomeButton
         type="primary"
-        href="https://drive.google.com/open?id=1eHNiY5ThFiKbHNA3Zi6Za_gimFWMQVUk"
+        href="https://drive.google.com/file/d/1iydqKXZz2ujI6bceTIR-hbJFS7TQte42/view"
         target="_blank"
       >
         Download CV

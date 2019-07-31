@@ -21,7 +21,7 @@
     font-family: 'Lato', sans-serif;
     font-size: 2.7em;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
-    letter-spacing: -1px;
+    letter-spacing: 1px;
     margin-left: -2px;
     margin-bottom: 0;
     display: inline-block;
@@ -29,7 +29,7 @@
 
     @include for-tablet-portrait-up {
       font-size: 4em;
-      letter-spacing: -2px;
+      letter-spacing: 2px;
       white-space: nowrap;
     }
 
@@ -41,7 +41,7 @@
   h2 {
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 1.6em;
-    letter-spacing: 0;
+    letter-spacing: 0.05em;
     color: #8a8a8a;
     pointer-events: auto;
 

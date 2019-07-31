@@ -15,7 +15,7 @@ class Home extends Component {
     return (
       <Page>
         <div className={cx('banner')}>
-          <h1>Radek Krzak</h1>
+          <h1>Radosław Krzak</h1>
           <br />
           <h2>Full stack developer</h2>
           <div className={cx('contact-button')}>
