@@ -18,7 +18,6 @@
     margin-bottom: calc(2 * var(--padding-large));
 
     text-align: center;
-    user-select: none;
 
     @include for-tablet-portrait-up {
       flex: 1 0 70%;
@@ -38,13 +37,6 @@
     .content {
       pointer-events: auto;
 
-      // p {
-      //   font-size: 1.2em;
-      //   font-family: 'Lato', sans-serif;
-      //   line-height: 1.45em;
-      //   color: #8a8a8a;
-      // }
-
       a {
         display: inline-block;
         position: relative;
@@ -52,8 +44,6 @@
         font-weight: 700;
       }
 
-      // TODO: IF USED IN MORE PLACES - EXPORT TO EFFECTS.SCSS
-      // Fix bug :/
       .fancy {
         a:after {
           content: '';

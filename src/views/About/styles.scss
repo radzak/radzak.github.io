@@ -18,7 +18,6 @@ $logoCount: 6;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    user-select: none;
 
     @include for-tablet-landscape-up {
       flex: 0 0 50%;

@@ -13,7 +13,7 @@ const CV = () => (
     <div className={cx('cv')}>
       <AwesomeButton
         type="primary"
-        href="https://drive.google.com/file/d/1iydqKXZz2ujI6bceTIR-hbJFS7TQte42/view"
+        href="https://drive.google.com/file/d/1AweOwPnB2EEjFmc-me39e6r9u7FWzfLd/view"
         target="_blank"
       >
         Download CV

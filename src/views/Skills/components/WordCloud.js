@@ -8,7 +8,7 @@ import styles from './styles.css';
 const cx = classNames.bind(styles);
 
 // eslint-disable-next-line react/prefer-stateless-function
-class MyCloud extends Component {
+class WordCloud extends Component {
   componentDidMount() {
     setInterval(() => {
       this.forceUpdate();
@@ -23,20 +23,17 @@ class MyCloud extends Component {
           style={{
             fontFamily: 'Lato',
             fontSize: 20,
-            // fontWeight: 'bold',
-            // fontStyle: 'italic',
-            color: () => randomColor({ hue: 'monochrome', luminosity: 'light' }),
+            color: () =>
+              randomColor({ hue: 'monochrome', luminosity: 'light' }),
             padding: 10
           }}
         >
-          <div style={{ fontSize: 30 }}>React.js</div>
+          <div style={{ fontSize: 30 }}>React</div>
           <div>HTML5</div>
           <div>SCSS</div>
           <div>Redux</div>
-          <div>Redux-Saga</div>
           <div>Git</div>
-          <div>DRF</div>
-          <div>Linux</div>
+          <div>Google Cloud Platform</div>
           <div style={{ fontSize: 30 }}>Django</div>
           <div>BeautifulSoup</div>
           <div>Docker</div>
@@ -44,9 +41,9 @@ class MyCloud extends Component {
           <div>REST</div>
           <div>Web scraping</div>
           <div>JavaScript</div>
-          <div>ES6</div>
-          <div>Jest</div>
-          <div>Enzyme</div>
+          <div>Airflow</div>
+          <div>Kubernetes</div>
+          <div>Helm</div>
           <div>Pytest</div>
           <div style={{ fontSize: 30 }}>Python</div>
         </TagCloud>
@@ -55,4 +52,4 @@ class MyCloud extends Component {
   }
 }
 
-export default MyCloud;
+export default WordCloud;

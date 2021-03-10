@@ -2,30 +2,46 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import PythonLogo from '@/assets/PythonLogo.svg';
-import DjangoLogo from '@/assets/DjangoLogo.svg';
-import DrfLogo from '@/assets/DjangoRestFrameworkLogo.jpg';
+import KubernetesLogo from '@/assets/KubernetesLogo.svg';
 import ReactLogo from '@/assets/ReactLogo.svg';
-import ReduxLogo from '@/assets/ReduxLogo.svg';
+import AirflowLogo from '@/assets/AirflowLogo.png';
 import HtmlCssLogo from '@/assets/HtmlCssLogo.svg';
+import TerraformLogo from '@/assets/TerraformLogo.svg';
+
 import Logo from './Logo';
 
 const Logos = ({ wrapperClass, logoClass }) => (
   <div className={wrapperClass}>
-    <Logo cssClass={logoClass} src={PythonLogo} alt="Python Logo" href="https://www.python.org/" />
     <Logo
       cssClass={logoClass}
-      src={DjangoLogo}
-      alt="Django Logo"
-      href="https://www.djangoproject.com/"
+      src={PythonLogo}
+      alt="Python Logo"
+      href="https://www.python.org/"
     />
     <Logo
       cssClass={logoClass}
-      src={DrfLogo}
-      alt="Django Rest Framework Logo"
-      href="http://www.django-rest-framework.org/"
+      src={AirflowLogo}
+      alt="Apache Airflow Logo"
+      href="https://airflow.apache.org/"
     />
-    <Logo cssClass={logoClass} src={ReactLogo} alt="React Logo" href="https://reactjs.org/" />
-    <Logo cssClass={logoClass} src={ReduxLogo} alt="Redux Logo" href="https://redux.js.org/" />
+    <Logo
+      cssClass={logoClass}
+      src={KubernetesLogo}
+      alt="Kubernetes Logo"
+      href="https://kubernetes.io/"
+    />
+    <Logo
+      cssClass={logoClass}
+      src={TerraformLogo}
+      alt="Terraform Logo"
+      href="https://www.terraform.io/"
+    />
+    <Logo
+      cssClass={logoClass}
+      src={ReactLogo}
+      alt="React Logo"
+      href="https://reactjs.org/"
+    />
     <Logo
       cssClass={logoClass}
       src={HtmlCssLogo}

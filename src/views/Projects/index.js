@@ -14,7 +14,7 @@ const Projects = props => (
   <Page pointerEvents="auto">
     <div className={cx('wrapper')}>
       <header className={cx('heading')}>
-        <h1>Personal Projects</h1>
+        <h1>Projects</h1>
         <h3>Check out what I&apos;ve been working on over the last months.</h3>
       </header>
 

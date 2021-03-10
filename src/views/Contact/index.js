@@ -18,8 +18,11 @@ const Contact = props => (
         </div>
         <div className={cx('content')}>
           <p>
-            I am available both in <strong>Poznan</strong> and <strong>Krakow</strong>.<br />
-            Wanna get in touch or talk about a project?<br />
+            I&apos;m staying in <strong>Los Cristianos</strong> on the southwest
+            coast of <strong>Tenerife</strong>.
+            <br />
+            Wanna get in touch or talk about a project?
+            <br />
             Feel free to contact me via email at{' '}
             <span className={cx('fancy')}>
               <a href="mailto:radek.krzak@gmail.com">radek.krzak@gmail.com</a>
